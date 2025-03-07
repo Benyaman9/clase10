@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express'
 import path from 'path'
 import { __dirname } from './path.js'
@@ -36,7 +37,7 @@ app.use(session({
 
 
 
-mongoose.connect("mongodb+srv://benjaartunduaga00:07AywxOhOrJdyRhH@cluster0.0mjfr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.URL_MONGO)
 .then(()=> console.log("DB is conectedd"))
     .catch((e)=>console.log("error al conectarme a DB:", e))
 
@@ -148,3 +149,8 @@ app.listen(PORT, () => {
     console.log(`server on port ${PORT}`);
 })
 */
+
+
+
+
+//  "mongodb+srv://benjaartunduaga00:07AywxOhOrJdyRhH@cluster0.0mjfr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
