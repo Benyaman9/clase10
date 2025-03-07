@@ -27,7 +27,7 @@ app.use(session({
     store: MongoStore.create({
         mongoUrl: "mongodb+srv://benjaartunduaga00:07AywxOhOrJdyRhH@cluster0.0mjfr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
         mongoOptions: {},
-        ttl: 150
+        ttl: 15000000000
     }),
     secret: 'SessionSecret',
 
